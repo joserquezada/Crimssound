@@ -7,7 +7,7 @@ class Program{
         var outputDevice = new WaveOutEvent();  // Creates a playback device that sends sound to my default audio output
         outputDevice.Init(testFile);            // Links testFile with the outputDevice
         outputDevice.Play();                    // Starts playing audio
-        Console.WriteLine("Playing... Press any key to exit."); // Displays message active while music is playing
+        Console.WriteLine("Music is currently playing... testing recompiling/remaking .exe"); // Displays message active while music is playing
         Console.ReadKey();  // Waits for user input
         outputDevice.Stop(); // Stops music
     }
