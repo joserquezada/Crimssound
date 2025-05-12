@@ -7,20 +7,30 @@ class Program{
         var outputDevice = new WaveOutEvent();  // Creates a playback device that sends sound to my default audio output
         outputDevice.Init(testFile);            // Links testFile with the outputDevice
         outputDevice.Play();                    // Starts playing audio
-        Console.WriteLine("Music is playing. Press P to pause and any other key to exit."); // Displays message active while music is playing
+        Console.WriteLine("Music is playing. Press P to pause, S to stop, and any other key to exit."); // Displays message active while music is playing
         bool isPaused = false;
         while(true){
             var userInput = Console.ReadKey(true).Key;
             if(userInput == ConsoleKey.P){
-                if(isPaused){
+                if(isPaused && testFile.Position == 0){
                     outputDevice.Play();
-                    Console.WriteLine("Resumed playing. Press P again to pause, and any other key to exit.");
+                    Console.WriteLine("Now playing. Press P again to pause, S to stop, and any other key to exit.");
+                }else if (isPaused){
+                    outputDevice.Play();
+                    Console.WriteLine("Resumed playing. Press P again to pause, S to stop, and any other key to exit.");
                 }else{
                     outputDevice.Pause();
-                    Console.WriteLine("Now paused. Press P again to resume, and any other key to exit.");
+                    Console.WriteLine("Now paused. Press P again to resume, S to stop, and any other key to exit.");
                 }
                 isPaused = !isPaused;
-            }else{
+            } else if (userInput == ConsoleKey.S){
+                outputDevice.Stop();
+                testFile.Position = 0;
+                Console.WriteLine("Now stopped. Press P to play, and any other key to exit.");
+                isPaused = true;
+            }
+            else{
+                Console.WriteLine("Bye bye!");
                 break;
             }
         }
