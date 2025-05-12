@@ -1,5 +1,6 @@
 ﻿using System;           // Imports the System, includes classes like Console
 using NAudio.Wave;      // Imports NAudio.Wave, to access audio-related classes
+using TagLib;
 class Program{
     static void Main()  // The entry point of the application, alongside Class Program
     {

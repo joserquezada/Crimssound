@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mYwoiXL9kvrV0RkWtTb/ECdRXVdvO/bw8Rwb28puHHaBMqbF3C2ZR73TDjS0oVfeRZ10Sp8nNbsIhs7ZHOYu0g==",
+  "dgSpecHash": "w6S6pTjUWZwC9XcKkG2hKzSNuf3TtIrcjYvUAbsP6MxCdbydZ92xzcxGsydv1ag4ny+N/aQNd301Y2lceB8v1g==",
   "success": true,
   "projectFilePath": "D:\\My Games\\Programming Personal Stuff\\Crimsound\\Crimssound\\CrimssoundPlayer\\CrimssoundPlayer.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,8 @@
     "C:\\Users\\JoseR\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
     "C:\\Users\\JoseR\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
     "C:\\Users\\JoseR\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\JoseR\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\JoseR\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\JoseR\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -29,7 +29,7 @@ public class Song{
         outputDevice.Stop();
         currentSong.Position = 0;
         isPlaying = true;
-        Console.WriteLine("Now stopped. Press P to play, and any other key to exit.");
+        Console.WriteLine("Now stopped. Press Spacebar to play, and any other key to exit.");
     }
 
 
