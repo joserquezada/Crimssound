@@ -2,7 +2,7 @@ using NAudio.Wave;      // Imports NAudio.Wave, to access audio-related classes
 public class Song{
     private AudioFileReader currentSong;
     private WaveOutEvent outputDevice;
-    public bool isPaused = false;
+    public bool isPlaying = true;
     public Song(string path){                       // Constructor to create song
         currentSong = new AudioFileReader(path);
         outputDevice = new WaveOutEvent();
@@ -10,25 +10,25 @@ public class Song{
 
     }
     public void PlaySong(){
-        if (!isPaused){
+        if (!isPlaying){
             PauseSong();
         } else {
             outputDevice.Play();
             Console.WriteLine("Now playing. Press Spacebar again to pause, S to stop, and any other key to exit.");
-            isPaused = false;
+            isPlaying = false;
         }
     }
 
     public void PauseSong(){
         outputDevice.Pause();
         Console.WriteLine("Now paused. Press Spacebar again to resume, S to stop, and any other key to exit.");
-        isPaused = true;
+        isPlaying = true;
     }
 
     public void StopSong(){
         outputDevice.Stop();
         currentSong.Position = 0;
-        isPaused = false;
+        isPlaying = true;
         Console.WriteLine("Now stopped. Press P to play, and any other key to exit.");
     }
 
