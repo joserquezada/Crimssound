@@ -23,5 +23,5 @@ class Program{
     }
 }
 // D:\Music\Blue Blur- Sonic Generations Original Soundtrack\Disc 2\08 Radical Highway- Act 1 'Vengeance Is Mine - Cash Cash RMX'.mp3
-// D:\Music\Blue Blur- Sonic Generations Original Soundtrack\Disc 2\10 Water Palace- Act 1 'Back 2 Back - Digital Remakin' Track'.mp3
+// D:\\Music\\Blue Blur- Sonic Generations Original Soundtrack\\Disc 2\\10 Water Palace- Act 1 'Back 2 Back - Digital Remakin' Track'.mp3
 // D:\\Music\\My Chemical Romance - The Black Parade\\13 - Famous Last Words.mp3

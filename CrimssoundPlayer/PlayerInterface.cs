@@ -19,7 +19,11 @@ public class PlayerInterface{
         Console.WriteLine("| Title: " + songTitle);
         Console.WriteLine("| Artists: " + songArtists[0]);
         Console.WriteLine("| Album: " + songAlbum);
-        Console.WriteLine("| Track: " + songNumber + " / " + songsInAlbum);
+        if (songsInAlbum != 0){
+            Console.WriteLine("| Track: " + songNumber + " / " + songsInAlbum);
+        } else {
+            Console.WriteLine("| Track: " + songNumber);
+        }
         Console.WriteLine("================================================");
     }
 }
