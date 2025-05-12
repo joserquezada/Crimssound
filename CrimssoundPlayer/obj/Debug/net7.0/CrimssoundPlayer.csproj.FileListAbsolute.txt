@@ -20,3 +20,4 @@ D:\My Games\Programming Personal Stuff\Crimsound\Crimssound\CrimssoundPlayer\obj
 D:\My Games\Programming Personal Stuff\Crimsound\Crimssound\CrimssoundPlayer\obj\Debug\net7.0\CrimssoundPlayer.pdb
 D:\My Games\Programming Personal Stuff\Crimsound\Crimssound\CrimssoundPlayer\obj\Debug\net7.0\CrimssoundPlayer.genruntimeconfig.cache
 D:\My Games\Programming Personal Stuff\Crimsound\Crimssound\CrimssoundPlayer\obj\Debug\net7.0\ref\CrimssoundPlayer.dll
+D:\My Games\Programming Personal Stuff\Crimsound\Crimssound\CrimssoundPlayer\bin\Debug\net7.0\TagLibSharp.dll
