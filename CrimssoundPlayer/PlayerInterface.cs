@@ -15,7 +15,7 @@ public class PlayerInterface{
         songsInAlbum = newSong.Tag.TrackCount;
     }
     public void DisplayInterface(){
-        Console.WriteLine("================================================");
+        Console.WriteLine("===========================================================================");
         Console.WriteLine("| Title: " + songTitle);
         Console.WriteLine("| Artists: " + songArtists[0]);
         Console.WriteLine("| Album: " + songAlbum);
@@ -24,6 +24,8 @@ public class PlayerInterface{
         } else {
             Console.WriteLine("| Track: " + songNumber);
         }
-        Console.WriteLine("================================================");
+        Console.WriteLine("|");
+        Console.WriteLine("| Press P for Previous, Spacebar to Play/Pause, S to Stop, and N for Next");
+        Console.WriteLine("===========================================================================");
     }
 }

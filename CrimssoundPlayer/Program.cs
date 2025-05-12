@@ -2,6 +2,7 @@
 using System.IO;
 using NAudio.Wave;      // Imports NAudio.Wave, to access audio-related classes
 using TagLib;
+using System.Collections.Generic;
 class Program{
     static void Main()  // The entry point of the application, alongside Class Program
     {
@@ -27,14 +28,12 @@ class Program{
                 currentSong.StopSong();
             } else if (userInput == ConsoleKey.N){
                 currentSong.StopSong();
-                num += 1;
+                num = currentLibrary.NextSong(num);
                 currentSong = new Song(currentLibrary.PlaySpecificSong(num));
                 currentSong.PlaySong();
             } else if (userInput == ConsoleKey.P){
                 currentSong.StopSong();
-                if (num > 0){
-                    num -= 1;
-                }
+                num = currentLibrary.PreviousSong(num);
                 currentSong = new Song(currentLibrary.PlaySpecificSong(num));
                 currentSong.PlaySong();
             } else {

@@ -17,14 +17,14 @@ public class Song{
             PauseSong();
         } else {
             outputDevice.Play();
-            Console.WriteLine("Now playing. Press Spacebar again to pause, S to stop, and any other key to exit.");
+            // Console.WriteLine("Now playing. Press Spacebar again to pause, S to stop, and any other key to exit.");
             isPlaying = false;
         }
     }
 
     public void PauseSong(){
         outputDevice.Pause();
-        Console.WriteLine("Now paused. Press Spacebar again to resume, S to stop, and any other key to exit.");
+        // Console.WriteLine("Now paused. Press Spacebar again to resume, S to stop, and any other key to exit.");
         isPlaying = true;
     }
 
@@ -32,7 +32,7 @@ public class Song{
         outputDevice.Stop();
         currentSong.Position = 0;
         isPlaying = true;
-        Console.WriteLine("Now stopped. Press Spacebar to play, and any other key to exit.");
+        // Console.WriteLine("Now stopped. Press Spacebar to play, and any other key to exit.");
     }
 
 }
