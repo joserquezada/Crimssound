@@ -17,7 +17,7 @@ public class PlayerInterface{
     public void DisplayInterface(){
         Console.WriteLine("================================================");
         Console.WriteLine("| Title: " + songTitle);
-        Console.WriteLine("| Artists: " + songArtists);
+        Console.WriteLine("| Artists: " + songArtists[0]);
         Console.WriteLine("| Album: " + songAlbum);
         Console.WriteLine("| Track: " + songNumber + " / " + songsInAlbum);
         Console.WriteLine("================================================");
