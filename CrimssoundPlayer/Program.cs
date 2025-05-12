@@ -9,10 +9,12 @@ class Program{
         // string filePath = Console.ReadLine();
         string filePath = "D:\\Music\\Blue Blur- Sonic Generations Original Soundtrack\\Disc 1";
         Song currentSong;
+        Library currentLibrary = null;
+        int num = 0;
         if (Directory.Exists(filePath)){
-            Library library = new Library(Directory.GetFiles(filePath));
-            int num = 1;
-            currentSong = new Song(library.PlaySpecificSong(num));
+            currentLibrary = new Library(Directory.GetFiles(filePath));
+            num = 1;
+            currentSong = new Song(currentLibrary.PlaySpecificSong(num));
         } else {
             currentSong = new Song(filePath);
         }
@@ -23,6 +25,18 @@ class Program{
                 currentSong.PlaySong();
             } else if (userInput == ConsoleKey.S){
                 currentSong.StopSong();
+            } else if (userInput == ConsoleKey.N){
+                currentSong.StopSong();
+                num += 1;
+                currentSong = new Song(currentLibrary.PlaySpecificSong(num));
+                currentSong.PlaySong();
+            } else if (userInput == ConsoleKey.P){
+                currentSong.StopSong();
+                if (num > 0){
+                    num -= 1;
+                }
+                currentSong = new Song(currentLibrary.PlaySpecificSong(num));
+                currentSong.PlaySong();
             } else {
                 Console.WriteLine("Bye bye!");
                 break;
