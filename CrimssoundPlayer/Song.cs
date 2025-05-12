@@ -1,13 +1,16 @@
 using NAudio.Wave;      // Imports NAudio.Wave, to access audio-related classes
+using TagLib;
 public class Song{
     private AudioFileReader currentSong;
     private WaveOutEvent outputDevice;
     public bool isPlaying = true;
+    private PlayerInterface playerInterface;
     public Song(string path){                       // Constructor to create song
         currentSong = new AudioFileReader(path);
         outputDevice = new WaveOutEvent();
+        playerInterface = new PlayerInterface(path);
         outputDevice.Init(currentSong);
-
+        playerInterface.DisplayInterface();
     }
     public void PlaySong(){
         if (!isPlaying){
