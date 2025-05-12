@@ -1,13 +1,21 @@
 ﻿using System;           // Imports the System, includes classes like Console
+using System.IO;
 using NAudio.Wave;      // Imports NAudio.Wave, to access audio-related classes
 using TagLib;
 class Program{
     static void Main()  // The entry point of the application, alongside Class Program
     {
-        Console.WriteLine("Enter song path: ");
-        // string songPath = Console.ReadLine();
-        string songPath = "D:\\Music\\My Chemical Romance - The Black Parade\\13 - Famous Last Words.mp3";
-        Song currentSong = new Song(songPath);
+        Console.WriteLine("Enter path: ");
+        // string filePath = Console.ReadLine();
+        string filePath = "D:\\Music\\Blue Blur- Sonic Generations Original Soundtrack\\Disc 1";
+        Song currentSong;
+        if (Directory.Exists(filePath)){
+            Library library = new Library(Directory.GetFiles(filePath));
+            int num = 1;
+            currentSong = new Song(library.PlaySpecificSong(num));
+        } else {
+            currentSong = new Song(filePath);
+        }
         currentSong.PlaySong();
         while (true) {
             var userInput = Console.ReadKey(true).Key;
