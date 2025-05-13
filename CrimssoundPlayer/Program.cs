@@ -23,7 +23,7 @@ class Program{
                 filePath = Console.ReadLine();
             }
         }
-        currentLibrary.PlaySpecificSong(num);
+        currentLibrary.GetSpecificSong(num);
         while (true) {
             var userInput = Console.ReadKey(true).Key;
             if(userInput == ConsoleKey.Spacebar){

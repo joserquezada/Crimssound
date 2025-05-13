@@ -34,7 +34,7 @@ public class Library{
         isPlaying = false;
     }
 
-    public void PlaySpecificSong(int trackNum){
+    public void GetSpecificSong(int trackNum){
         Console.WriteLine("Playing song...");
         if(isPlaying){
             StopSong();
@@ -48,17 +48,17 @@ public class Library{
     public void PreviousSong(){
         Console.WriteLine("Previous song....");
         if (trackNum > 0){
-            PlaySpecificSong(trackNum - 1);
+            GetSpecificSong(trackNum - 1);
         } else {
-            PlaySpecificSong(songPaths.Count - 1);
+            GetSpecificSong(songPaths.Count - 1);
         }
     }
     public void NextSong(){
         Console.WriteLine("Next song...");
         if (trackNum + 1 == songPaths.Count){
-            PlaySpecificSong(0);
+            GetSpecificSong(0);
         } else {
-            PlaySpecificSong(trackNum + 1);
+            GetSpecificSong(trackNum + 1);
         }
     }
 }
