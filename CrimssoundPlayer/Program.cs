@@ -9,33 +9,31 @@ class Program{
         Console.WriteLine("Enter path: ");
         // string filePath = Console.ReadLine();
         string filePath = "D:\\Music\\Blue Blur- Sonic Generations Original Soundtrack\\Disc 1";
-        Song currentSong;
+        //Song currentSong;
         Library currentLibrary = null;
         int num = 0;
-        if (Directory.Exists(filePath)){
-            currentLibrary = new Library(Directory.GetFiles(filePath));
-            num = 1;
-            currentSong = new Song(currentLibrary.PlaySpecificSong(num));
-        } else {
-            currentSong = new Song(filePath);
+        bool selectDirectory = true;
+        while (selectDirectory){
+            if (Directory.Exists(filePath)){
+                currentLibrary = new Library(Directory.GetFiles(filePath));
+                num = 1;
+                selectDirectory = false;
+            } else {
+                Console.WriteLine("Enter path: ");
+                filePath = Console.ReadLine();
+            }
         }
-        currentSong.PlaySong();
+        currentLibrary.PlaySpecificSong(num);
         while (true) {
             var userInput = Console.ReadKey(true).Key;
             if(userInput == ConsoleKey.Spacebar){
-                currentSong.PlaySong();
+                currentLibrary.PlaySong();
             } else if (userInput == ConsoleKey.S){
-                currentSong.StopSong();
+                currentLibrary.StopSong();
             } else if (userInput == ConsoleKey.N){
-                currentSong.StopSong();
-                num = currentLibrary.NextSong(num);
-                currentSong = new Song(currentLibrary.PlaySpecificSong(num));
-                currentSong.PlaySong();
+                currentLibrary.NextSong();
             } else if (userInput == ConsoleKey.P){
-                currentSong.StopSong();
-                num = currentLibrary.PreviousSong(num);
-                currentSong = new Song(currentLibrary.PlaySpecificSong(num));
-                currentSong.PlaySong();
+                currentLibrary.PreviousSong();
             } else {
                 Console.WriteLine("Bye bye!");
                 break;
