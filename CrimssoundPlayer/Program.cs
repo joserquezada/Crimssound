@@ -7,8 +7,8 @@ class Program{
     static void Main()  // The entry point of the application, alongside Class Program
     {
         Console.WriteLine("Enter path: ");
-        // string filePath = Console.ReadLine();
-        string filePath = "D:\\Music\\Blue Blur- Sonic Generations Original Soundtrack\\Disc 1";
+        //string filePath = Console.ReadLine();
+        string filePath = "D:\\Music\\Blue Blur- Sonic Generations Original Soundtrack\\Disc 2";
         //Song currentSong;
         Library currentLibrary = null;
         int num = 0;
@@ -16,7 +16,7 @@ class Program{
         while (selectDirectory){
             if (Directory.Exists(filePath)){
                 currentLibrary = new Library(Directory.GetFiles(filePath));
-                num = 1;
+                num = 0;
                 selectDirectory = false;
             } else {
                 Console.WriteLine("Enter path: ");
@@ -25,6 +25,9 @@ class Program{
         }
         currentLibrary.GetSpecificSong(num);
         while (true) {
+            // if (currentLibrary.SongEnded()){
+            //     currentLibrary.NextSong();
+            // }
             var userInput = Console.ReadKey(true).Key;
             if(userInput == ConsoleKey.Spacebar){
                 currentLibrary.PlaySong();

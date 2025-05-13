@@ -6,11 +6,11 @@ public class Song{
     private WaveOutEvent outputDevice;
     public bool isPlaying = true;
     private PlayerInterface playerInterface;
-    string songTitle;
-    string[] songArtists;
-    string songAlbum;
-    uint trackNumber;
-    uint songsInAlbum;
+    private string songTitle;
+    private string[] songArtists;
+    private string songAlbum;
+    private uint trackNumber;
+    private uint songsInAlbum;
     public Song(string path){                       // Constructor to create song
         currentSong = new AudioFileReader(path);
         outputDevice = new WaveOutEvent();

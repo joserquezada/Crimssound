@@ -61,4 +61,20 @@ public class Library{
             GetSpecificSong(trackNum + 1);
         }
     }
+
+    public bool SongEnded(){
+        bool songEnd = false;
+        outputDevice.PlaybackStopped += (sender, e) =>
+        {
+            if (isPlaying && e.Exception == null){
+                songEnd = true;
+            } else if (e.Exception != null) {
+                Console.WriteLine("Error During Playback");
+            } else {
+                songEnd = false;
+            }
+        };
+        return songEnd;
+    }
+
 }
